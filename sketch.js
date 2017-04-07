@@ -30,11 +30,11 @@ function timerFunc() {
   point(canvas.width-x, canvas.height-y)
   xadd=Math.floor(random(-10,11));
   yadd=Math.floor(random(-10,11));
-  if (x<10 || x>(canvas.width-10)) {
+  if (x+xadd<10 || x+xadd>(canvas.width-10)) {
     xadd*=-1
   }
   x+=xadd
-  if(y-yadd<10) {
+  if(y+yadd<10) {
     yadd*=-1
   }
   y-=yadd
