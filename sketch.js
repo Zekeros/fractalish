@@ -2,6 +2,7 @@ var bCol = 100
 var arrs = []
 var x=10
 var y=10
+var saveName
 
 function setup() {
   createCanvas(1300,600)
@@ -20,7 +21,8 @@ function draw() {
 }
 
 function saveC() {
-	saveCanvas('myCanvas',"png")
+  saveName = prompt("File name: ")
+	saveCanvas(saveName,"png")
 }
 
 function timerFunc() {
