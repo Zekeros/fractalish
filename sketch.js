@@ -60,6 +60,6 @@ function randFill() {
 function makeSave() {
   saveB = createButton("SAVE")
   saveB.mousePressed(saveC)
-  saveB.size(50,20)
+  // saveB.size(50,20)
   saveB.position(0,0)
 }
