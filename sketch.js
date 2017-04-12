@@ -3,9 +3,11 @@ var arrs = []
 var x=10
 var y=10
 var saveName
+var ww = window.innerWidth
+var wh = window.innerHeight
 
 function setup() {
-  createCanvas(1300,600)
+  createCanvas(ww,wh)
 	x = canvas.width/2;
 	y = canvas.height/2;
   makeSave()
@@ -22,6 +24,9 @@ function draw() {
 
 function saveC() {
   saveName = prompt("File name: ")
+  if (!saveName) {
+    saveName = "myCanvas"
+  }
 	saveCanvas(saveName,"png")
 }
 
@@ -55,4 +60,6 @@ function randFill() {
 function makeSave() {
   saveB = createButton("SAVE")
   saveB.mousePressed(saveC)
+  saveB.size(50,20)
+  saveB.position(0,0)
 }
